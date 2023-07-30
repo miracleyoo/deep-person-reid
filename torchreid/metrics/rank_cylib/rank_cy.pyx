@@ -155,6 +155,12 @@ cpdef eval_cuhk03_cy(float[:,:] distmat, int64_t[:] q_pids, int64_t[:]g_pids,
 
 cpdef eval_market1501_cy(float[:,:] distmat, int64_t[:] q_pids, int64_t[:]g_pids,
                          int64_t[:]q_camids, int64_t[:]g_camids, int64_t max_rank):
+    print("distmat.shape:", distmat.shape)
+    print("q_pids.shape:", q_pids.shape)
+    print("g_pids.shape:", g_pids.shape)
+    print("q_camids.shape:", q_camids.shape)
+    print("g_camids.shape:", g_camids.shape)
+    print("max_rank:", max_rank)
 
     cdef int64_t num_q = distmat.shape[0]
     cdef int64_t num_g = distmat.shape[1]
